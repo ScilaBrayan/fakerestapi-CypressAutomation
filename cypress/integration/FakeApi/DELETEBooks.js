@@ -16,3 +16,4 @@ Then(/^a api retorna status "([^"]*)"$/, (postStatus) => {
         assert.equal(response.status, parseInt(postStatus), "Status retornando deve ser 200");
     })
 });
+
