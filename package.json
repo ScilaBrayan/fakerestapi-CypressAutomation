@@ -1,0 +1,24 @@
+{
+  "name": "fakerestapi-CypressAutomation",
+  "version": "1.0.0",
+  "description": "Realizar automação de testes para API, utlizando o site https://fakerestapi.azurewebsites.net/",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "./node_modules/.bin/cypress open",
+    "cypress:run": "./node_modules/.bin/cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ScilaBrayan/fakerestapi-CypressAutomation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ScilaBrayan/fakerestapi-CypressAutomation/issues"
+  },
+  "homepage": "https://github.com/ScilaBrayan/fakerestapi-CypressAutomation#readme",
+  "devDependencies": {
+    "cypress": "^4.12.1"
+  }
+}
