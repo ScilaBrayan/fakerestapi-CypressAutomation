@@ -5,7 +5,7 @@ function allBooks() {
         method: 'GET',
         url: 'Books',
         failOnStatusCode: false,
-    })
+    }).as('getAllBooks')
 }
 
 export{

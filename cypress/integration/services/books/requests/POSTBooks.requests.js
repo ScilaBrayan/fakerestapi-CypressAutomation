@@ -1,5 +1,5 @@
 /// <reference types="cypress"/>
-const payloadAddBook = require('../Payloads/add-book.json')
+const payloadAddBook = require('../../../../fixtures/add-book.json')
 
 function addBooks() {
     return cy.request({
@@ -7,7 +7,7 @@ function addBooks() {
         url: 'Books',
         failOnStatusCode: false,
         body: payloadAddBook
-    })
+    }).as('postNewBook')
 }
 
 export{
