@@ -1,4 +1,7 @@
 {
     "baseUrl": "https://fakerestapi.azurewebsites.net/api/",
-    "video": false
+    "video": false,
+    "experimentalSourceRewriting": true,
+    "watchForFileChanges": true,
+    "testFiles": "**/*.*spec.*"
 }
