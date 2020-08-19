@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2020-08-19T20:40:19.154Z",
-    "end": "2020-08-19T20:40:20.048Z",
-    "duration": 894,
+    "start": "2020-08-19T20:46:33.698Z",
+    "end": "2020-08-19T20:46:34.897Z",
+    "duration": 1199,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "5cffef24-c009-4e41-a9bb-a2a56e37bee7",
+      "uuid": "2e4406e8-6578-4174-bb1a-0b177897aea5",
       "title": "",
       "fullFile": "cypress/integration/services/books/tests/DELETEBooks.spec.js",
       "file": "cypress/integration/services/books/tests/DELETEBooks.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "ffaeec76-84c5-465a-91e2-822ad1d5d92f",
+          "uuid": "764e51f2-eba4-4bbd-a252-5232c703738d",
           "title": "DELETE Books",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Deletar um livro",
               "fullTitle": "DELETE Books Deletar um livro",
               "timedOut": null,
-              "duration": 628,
+              "duration": 888,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "GETBooks.allBooks().then(function (busca) {\n  DELETEBooks.deleteBooks(busca.body[0].ID).should(function (resDelete) {\n    expect(resDelete.status).to.eq(200);\n  });\n});",
               "err": {},
-              "uuid": "73e1fc56-c364-4376-8865-873761e20fce",
-              "parentUUID": "ffaeec76-84c5-465a-91e2-822ad1d5d92f",
+              "uuid": "dd66d028-c25f-44ea-a191-a4a8982eed53",
+              "parentUUID": "764e51f2-eba4-4bbd-a252-5232c703738d",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Criar e deletar um livro",
               "fullTitle": "DELETE Books Criar e deletar um livro",
               "timedOut": null,
-              "duration": 248,
+              "duration": 325,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -65,21 +65,21 @@
               "context": null,
               "code": "POSTBooks.addBooks().then(function (addBook) {\n  cy.log(addBook.body);\n  DELETEBooks.deleteBooks(addBook.body.ID).should(function (resDelete) {\n    expect(resDelete.status).to.eq(200);\n  });\n});",
               "err": {},
-              "uuid": "45ae40be-458a-40ea-957c-36d0b614da79",
-              "parentUUID": "ffaeec76-84c5-465a-91e2-822ad1d5d92f",
+              "uuid": "b0c7d1c5-1522-48b4-8f89-49161c355916",
+              "parentUUID": "764e51f2-eba4-4bbd-a252-5232c703738d",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "73e1fc56-c364-4376-8865-873761e20fce",
-            "45ae40be-458a-40ea-957c-36d0b614da79"
+            "dd66d028-c25f-44ea-a191-a4a8982eed53",
+            "b0c7d1c5-1522-48b4-8f89-49161c355916"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 876,
+          "duration": 1213,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2020-08-19T20:40:21.390Z",
-    "end": "2020-08-19T20:40:21.994Z",
-    "duration": 604,
+    "start": "2020-08-19T20:46:35.921Z",
+    "end": "2020-08-19T20:46:36.475Z",
+    "duration": 554,
     "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "629ee854-7617-4a9d-9ead-6bc91acfab3f",
+      "uuid": "5c4ba4e6-87ca-4af5-b224-821e51dfb24a",
       "title": "",
       "fullFile": "cypress/integration/services/books/tests/GETBooks.spec.js",
       "file": "cypress/integration/services/books/tests/GETBooks.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "211f07b7-f873-4d08-86b5-b12368fb4a1d",
+          "uuid": "83b63855-c2e8-4c16-a969-c6f2e108dd87",
           "title": "GETBooks",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Validar status de retorno",
               "fullTitle": "GETBooks Validar status de retorno",
               "timedOut": null,
-              "duration": 215,
+              "duration": 165,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "GETBooks.allBooks().should(function (response) {\n  expect(response.status).to.eql(200);\n});",
               "err": {},
-              "uuid": "0a06bd76-c25f-47af-8e9b-34eabe627fe5",
-              "parentUUID": "211f07b7-f873-4d08-86b5-b12368fb4a1d",
+              "uuid": "31e7d6f7-2f5f-423d-b640-2c9cbd42c962",
+              "parentUUID": "83b63855-c2e8-4c16-a969-c6f2e108dd87",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Validar se o body não se encontra vazio",
               "fullTitle": "GETBooks Validar se o body não se encontra vazio",
               "timedOut": null,
-              "duration": 147,
+              "duration": 163,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "GETBooks.allBooks().should(function (response) {\n  expect(response).to.not.be.null;\n});",
               "err": {},
-              "uuid": "7b2a9073-e360-4bde-8148-04a33605a658",
-              "parentUUID": "211f07b7-f873-4d08-86b5-b12368fb4a1d",
+              "uuid": "df8638c1-ecc0-4b0d-81ac-82c4887011c4",
+              "parentUUID": "83b63855-c2e8-4c16-a969-c6f2e108dd87",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "Validar tamanho do array",
               "fullTitle": "GETBooks Validar tamanho do array",
               "timedOut": null,
-              "duration": 207,
+              "duration": 200,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -83,22 +83,22 @@
               "context": null,
               "code": "GETBooks.allBooks().should(function (response) {\n  expect(response.body).to.have.length.above(1);\n  cy.log(response.body.length);\n});",
               "err": {},
-              "uuid": "1a5f5c19-7a4a-404d-be34-d7de8920f0e0",
-              "parentUUID": "211f07b7-f873-4d08-86b5-b12368fb4a1d",
+              "uuid": "86634d00-8f0a-46ea-bcef-1c4a1891ba96",
+              "parentUUID": "83b63855-c2e8-4c16-a969-c6f2e108dd87",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "0a06bd76-c25f-47af-8e9b-34eabe627fe5",
-            "7b2a9073-e360-4bde-8148-04a33605a658",
-            "1a5f5c19-7a4a-404d-be34-d7de8920f0e0"
+            "31e7d6f7-2f5f-423d-b640-2c9cbd42c962",
+            "df8638c1-ecc0-4b0d-81ac-82c4887011c4",
+            "86634d00-8f0a-46ea-bcef-1c4a1891ba96"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 569,
+          "duration": 528,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
