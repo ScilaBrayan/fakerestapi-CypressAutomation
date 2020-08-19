@@ -1,0 +1,145 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-08-19T20:40:23.331Z",
+    "end": "2020-08-19T20:40:23.612Z",
+    "duration": 281,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c0a638cd-096a-42fc-bdc5-f68fc3639e61",
+      "title": "",
+      "fullFile": "cypress/integration/services/books/tests/POSTBooks.spec.js",
+      "file": "cypress/integration/services/books/tests/POSTBooks.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "234c0e60-ef8d-46d5-aaa4-b3b43705f054",
+          "title": "POST Books",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Adicionar novo livro",
+              "fullTitle": "POST Books Adicionar novo livro",
+              "timedOut": null,
+              "duration": 220,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "POSTBooks.addBooks().should(function (response) {\n  expect(response.status).to.eql(200);\n  resAddBook = response;\n});",
+              "err": {},
+              "uuid": "1dd1336c-352a-4667-9d11-a3f3348a16ad",
+              "parentUUID": "234c0e60-ef8d-46d5-aaa4-b3b43705f054",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Retorno não deve ser vazio",
+              "fullTitle": "POST Books Retorno não deve ser vazio",
+              "timedOut": null,
+              "duration": 16,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "expect(resAddBook.body).to.not.be.null;",
+              "err": {},
+              "uuid": "87e70133-0b51-4fba-93a7-cbd506f3197a",
+              "parentUUID": "234c0e60-ef8d-46d5-aaa4-b3b43705f054",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "O nome do livro deve ser Harry Potter e a Pedra Filosofal",
+              "fullTitle": "POST Books O nome do livro deve ser Harry Potter e a Pedra Filosofal",
+              "timedOut": null,
+              "duration": 8,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "expect(resAddBook.body.Title).to.eql(\"Harry Potter e a Pedra Filosofal\");",
+              "err": {},
+              "uuid": "7ea5655b-1dcf-4725-af72-cf39c70d965a",
+              "parentUUID": "234c0e60-ef8d-46d5-aaa4-b3b43705f054",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1dd1336c-352a-4667-9d11-a3f3348a16ad",
+            "87e70133-0b51-4fba-93a7-cbd506f3197a",
+            "7ea5655b-1dcf-4725-af72-cf39c70d965a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 244,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "mochawesome-report",
+        "quiet": true,
+        "html": false,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-08-19T20:40:21.390Z",
+    "end": "2020-08-19T20:40:21.994Z",
+    "duration": 604,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "629ee854-7617-4a9d-9ead-6bc91acfab3f",
+      "title": "",
+      "fullFile": "cypress/integration/services/books/tests/GETBooks.spec.js",
+      "file": "cypress/integration/services/books/tests/GETBooks.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "211f07b7-f873-4d08-86b5-b12368fb4a1d",
+          "title": "GETBooks",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Validar status de retorno",
+              "fullTitle": "GETBooks Validar status de retorno",
+              "timedOut": null,
+              "duration": 215,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "GETBooks.allBooks().should(function (response) {\n  expect(response.status).to.eql(200);\n});",
+              "err": {},
+              "uuid": "0a06bd76-c25f-47af-8e9b-34eabe627fe5",
+              "parentUUID": "211f07b7-f873-4d08-86b5-b12368fb4a1d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validar se o body não se encontra vazio",
+              "fullTitle": "GETBooks Validar se o body não se encontra vazio",
+              "timedOut": null,
+              "duration": 147,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "GETBooks.allBooks().should(function (response) {\n  expect(response).to.not.be.null;\n});",
+              "err": {},
+              "uuid": "7b2a9073-e360-4bde-8148-04a33605a658",
+              "parentUUID": "211f07b7-f873-4d08-86b5-b12368fb4a1d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validar tamanho do array",
+              "fullTitle": "GETBooks Validar tamanho do array",
+              "timedOut": null,
+              "duration": 207,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "GETBooks.allBooks().should(function (response) {\n  expect(response.body).to.have.length.above(1);\n  cy.log(response.body.length);\n});",
+              "err": {},
+              "uuid": "1a5f5c19-7a4a-404d-be34-d7de8920f0e0",
+              "parentUUID": "211f07b7-f873-4d08-86b5-b12368fb4a1d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0a06bd76-c25f-47af-8e9b-34eabe627fe5",
+            "7b2a9073-e360-4bde-8148-04a33605a658",
+            "1a5f5c19-7a4a-404d-be34-d7de8920f0e0"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 569,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "mochawesome-report",
+        "quiet": true,
+        "html": false,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-08-19T20:40:19.154Z",
+    "end": "2020-08-19T20:40:20.048Z",
+    "duration": 894,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5cffef24-c009-4e41-a9bb-a2a56e37bee7",
+      "title": "",
+      "fullFile": "cypress/integration/services/books/tests/DELETEBooks.spec.js",
+      "file": "cypress/integration/services/books/tests/DELETEBooks.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ffaeec76-84c5-465a-91e2-822ad1d5d92f",
+          "title": "DELETE Books",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deletar um livro",
+              "fullTitle": "DELETE Books Deletar um livro",
+              "timedOut": null,
+              "duration": 628,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "GETBooks.allBooks().then(function (busca) {\n  DELETEBooks.deleteBooks(busca.body[0].ID).should(function (resDelete) {\n    expect(resDelete.status).to.eq(200);\n  });\n});",
+              "err": {},
+              "uuid": "73e1fc56-c364-4376-8865-873761e20fce",
+              "parentUUID": "ffaeec76-84c5-465a-91e2-822ad1d5d92f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Criar e deletar um livro",
+              "fullTitle": "DELETE Books Criar e deletar um livro",
+              "timedOut": null,
+              "duration": 248,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "POSTBooks.addBooks().then(function (addBook) {\n  cy.log(addBook.body);\n  DELETEBooks.deleteBooks(addBook.body.ID).should(function (resDelete) {\n    expect(resDelete.status).to.eq(200);\n  });\n});",
+              "err": {},
+              "uuid": "45ae40be-458a-40ea-957c-36d0b614da79",
+              "parentUUID": "ffaeec76-84c5-465a-91e2-822ad1d5d92f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "73e1fc56-c364-4376-8865-873761e20fce",
+            "45ae40be-458a-40ea-957c-36d0b614da79"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 876,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "mochawesome-report",
+        "quiet": true,
+        "html": false,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}
