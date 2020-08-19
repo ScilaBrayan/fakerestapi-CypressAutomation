@@ -35,8 +35,8 @@ jobs:
     # instalando as dependencias
     - run: npm install
     
-#     - run: npm run cypress:run
-
+    # limpando ambiente de report
+    - run: npm run reporter:clean
     # executar os testes usando o cucumber
     - run: npm run cy:run:cucumber
     
@@ -48,5 +48,5 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@3.5.9
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: gh-pages
+        BRANCH: cucumber-report
         FOLDER: cypress/reports/report-html 

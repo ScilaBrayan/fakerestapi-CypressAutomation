@@ -35,10 +35,11 @@ jobs:
     # instalando as dependencias
     - run: npm install
     
-#     - run: npm run cypress:run
+    # limpando ambiente de report
+    - run: npm run reporter:clean
 
-    # executar os testes usando o cucumber
-    - run: npm run cy:run:cucumber
+    # executar os testes 
+    - run: npm run cypress:run
     
     # gerar o relatorio em html
     - run: npm run mocha:merge
