@@ -19,9 +19,13 @@
         ├── .feature
     ├── plugins
         ├── index.js
+    ├── reports
+        ├── cucumber-json
+        ├── report-html 
     ├── support
         ├── index.js
-        ├── commans.js  
+        ├── commans.js 
+├── mochawesome-report
 ├── node_modules
 ├── .gitignore
 ├── .npmrc
@@ -31,9 +35,14 @@
 ├── README.md  
 ```
 
+- A pasta `mochawesome-report` gera relatório com base no mochawesome, para realizar alguma configuração adicionar, utilizar o arquivo `reporter-config.json`. 
+
 <h2> Dependencias usadas no projeto</h2>
 
 - cypress-cucumber-preprocessor 
+
+- Cucumber HTML Reporter:
+
 
 <h3>Instalar as dependencias</h3>
 
@@ -54,6 +63,34 @@
 ````
     npm run cy:run:cucumber
 ````
+
+<h2>Para gerar os relatórios</h2>
+
+
+<h3>Através do mochawesome</h3>
+
+```
+    npm run mocha:merge
+```
+
+```
+    npm run mocha:generate
+```
+
+Abrir o arquivo `full_report.html` que se encontra na pasta `mochawesome-report`
+
+<h3>Através do cucumber</h3>
+
+```
+    npm run reporter:cucumber
+```
+
+<h3>Limpar ambiente de relatórios</h3>
+
+```
+    npm run reporter:clean
+```
+
 
 <h2>GitHub Pages</h2>
 
