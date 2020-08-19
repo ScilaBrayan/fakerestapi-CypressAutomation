@@ -11,7 +11,7 @@ function updateBooks(ID) {
         },
         failOnStatusCode: false,
         body: payloadUpdateBook,
-    })
+    }).as('updateBook')
 }
 
 export{

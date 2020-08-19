@@ -1,3 +1,8 @@
 {
-    "Title": "Livro Atualizado"
-}
+    "ID": 0,
+    "Title": "Livro",
+    "Description": "string",
+    "PageCount": 0,
+    "Excerpt": "string",
+    "PublishDate": "2020-08-17T21:20:05.001Z"
+  }
