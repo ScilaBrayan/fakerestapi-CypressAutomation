@@ -1,5 +1,5 @@
 /// <reference types="cypress"/>
-const payloadUpdateBook = require('../Payloads/update-book.json')
+const payloadUpdateBook = require('../../../../fixtures/update-book.json')
 
 function updateBooks(ID) {
     return cy.request({
@@ -11,7 +11,7 @@ function updateBooks(ID) {
         },
         failOnStatusCode: false,
         body: payloadUpdateBook,
-    })
+    }).as('updateBook')
 }
 
 export{

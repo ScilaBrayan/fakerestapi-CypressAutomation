@@ -3,5 +3,5 @@
     "video": false,
     "experimentalSourceRewriting": true,
     "watchForFileChanges": true,
-    "testFiles": "**/*.*spec.*"
+    "testFiles": "**/*.{feature,features}"
 }

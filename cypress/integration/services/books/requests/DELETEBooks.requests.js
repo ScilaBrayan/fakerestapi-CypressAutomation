@@ -5,7 +5,7 @@ function deleteBooks(ID) {
         method: 'DELETE',
         url: `Books/${ID}`,
         failOnStatusCode: false,
-    })
+    }).as('deleteBook')
 }
 
 export{
