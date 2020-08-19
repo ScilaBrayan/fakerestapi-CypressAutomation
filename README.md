@@ -94,4 +94,6 @@ Abrir o arquivo `full_report.html` que se encontra na pasta `mochawesome-report`
 
 <h2>GitHub Pages</h2>
 
- https://scilabrayan.github.io/fakerestapi-CypressAutomation/
+- Report baseado nas specs de teste 
+
+https://scilabrayan.github.io/fakerestapi-CypressAutomation/full_report.html 
