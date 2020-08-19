@@ -3,5 +3,9 @@
     "video": false,
     "experimentalSourceRewriting": true,
     "watchForFileChanges": true,
-    "testFiles": "**/*.*spec.*"
+    "testFiles": "**/*.*spec.*",
+    "reporter": "cypress-multi-reporters",
+    "reporterOptions": {
+        "configFile":"reporter-config.json"
+    }
 }

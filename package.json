@@ -7,7 +7,12 @@
     "cypress:open": "./node_modules/.bin/cypress open",
     "cypress:run": "./node_modules/.bin/cypress run",
     "cy:open:cucumber": "npx cypress open --config-file cypress-cucumber.json",
-    "cy:run:cucumber": "npx cypress run --config-file cypress-cucumber.json --spec cypress/integration/All.features"
+    "cy:run:cucumber": "npx cypress run --config-file cypress-cucumber.json --spec cypress/integration/Books.feature",
+    
+    "mocha:merge": "mochawesome-merge > mochawesome-merge/full_report.json",
+    "mocha:generate": "marge full_report.json",
+    "reporter:clean": "rm -rf mochawesome-report full_report.json cypress/videos/** cypress/reports/cucumber-json/** cypress/reports/report-html/**",
+    "reporter:cucumber": "node cypress/reports/reporter.js"
   },
   "repository": {
     "type": "git",
@@ -22,9 +27,21 @@
   "homepage": "https://github.com/ScilaBrayan/fakerestapi-CypressAutomation#readme",
   "devDependencies": {
     "cypress": "^4.12.1",
-    "cypress-cucumber-preprocessor": "^1.12.0"
+    "cypress-cucumber-preprocessor": "^1.12.0",
+    "cucumber-html-reporter": "^5.2.0",
+    "cypress-multi-reporters": "^1.4.0",
+    "mocha": "^8.1.1",
+    "mochawesome": "^6.1.1",
+    "mochawesome-merge": "^4.1.0",
+    "mochawesome-report-generator": "^5.1.0"
   },
   "cypress-cucumber-preprocessor": {
-    "nonGlobalStepDefinitions": true
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/reports/cucumber-json",
+      "filPrefix": "",
+      "fileSuffix": ".cucumber"
+    }
   }
 }
