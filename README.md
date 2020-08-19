@@ -9,11 +9,13 @@
 ├── Cypress
     ├── fixtures 
     ├── integration
+        ├── Books
+        ├── common
         ├── services
             ├── books
-                ├── payloads
                 ├── requests
                 ├── tests
+        ├── All.feature
         ├── .feature
     ├── plugins
         ├── index.js
@@ -29,7 +31,7 @@
 ├── README.md  
 ```
 
-<h3> Dependencias usadas no projeto</h3>
+<h2> Dependencias usadas no projeto</h2>
 
 - cypress-cucumber-preprocessor 
 
@@ -39,10 +41,18 @@
     npm install 
 ```
 
-<h3>Executar os testes</h3>
+<h2>Executar os testes</h2>
+
+<h3>Através das specs</h3>
 
 ````
     npm run cypress:run
+````
+
+<h3>Através do cucumber</h3>
+
+````
+    npm run cy:run:cucumber
 ````
 
 <h2>GitHub Pages</h2>
