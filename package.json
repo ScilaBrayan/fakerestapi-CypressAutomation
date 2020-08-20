@@ -9,7 +9,7 @@
     "cy:open:cucumber": "npx cypress open --config-file cypress-cucumber.json",
     "cy:run:cucumber": "npx cypress run --config-file cypress-cucumber.json --spec cypress/integration/Books.feature",
     
-    "mocha:merge": "mochawesome-merge > mochawesome-merge/full_report.json",
+    "mocha:merge": "mochawesome-merge > full_report.json",
     "mocha:generate": "marge full_report.json",
     "reporter:clean": "rm -rf mochawesome-report full_report.json cypress/videos/** cypress/reports/cucumber-json/** cypress/reports/report-html/**",
     "reporter:cucumber": "node cypress/reports/reporter.js"

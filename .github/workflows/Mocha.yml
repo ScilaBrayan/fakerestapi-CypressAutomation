@@ -35,10 +35,11 @@ jobs:
     # instalando as dependencias
     - run: npm install
     
-#     - run: npm run cypress:run
+    # limpando ambiente de report
+    - run: npm run reporter:clean
 
-    # executar os testes usando o cucumber
-    - run: npm run cy:run:cucumber
+    # executar os testes 
+    - run: npm run cypress:run
     
     # gerar o relatorio em html
     - run: npm run mocha:merge
@@ -50,5 +51,5 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@3.5.9
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: gh-pages
-        FOLDER: mochawesome-report/full_report.html
+        BRANCH: mocha-report
+        FOLDER: mochawesome-report
