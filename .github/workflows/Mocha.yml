@@ -42,14 +42,13 @@ jobs:
     - run: npm run cy:run:spec
     
     # gerar o relatorio em html
-    - run: allure generate
-    - run: allure open
-
+    - run: npm run mocha:merge
+    - run: npm run mocha:generate
     
     # publicar relatorio em html
     - name: Deploy to GithubPages
       uses: JamesIves/github-pages-deploy-action@3.5.9
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: allure-report
-        FOLDER: allure-report/index.html
+        BRANCH: mocha-report
+        FOLDER: mochawesome-report/full_report.html

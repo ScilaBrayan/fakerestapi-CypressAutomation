@@ -1,1 +1,0 @@
-{"uuid":"c70555d1-3dd0-4905-a5e6-f99c4de127a3","historyId":"244075ed52867e48f1a7484c9dd5831d","status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"labels":[{"name":"parentSuite","value":"POST Books"}],"links":[],"start":1597979104076,"name":"Retorno não deve ser vazio","fullName":"Retorno não deve ser vazio","stop":1597979105717}

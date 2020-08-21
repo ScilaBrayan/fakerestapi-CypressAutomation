@@ -108,4 +108,6 @@ dist
 
 # report 
 allure-report/**
-allure-result/.*json
+allure-results/**
+mochawesome-report/**
+full_report.json
