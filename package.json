@@ -4,15 +4,15 @@
   "description": "Realizar automação de testes para API, utlizando o site https://fakerestapi.azurewebsites.net/",
   "main": "index.js",
   "scripts": {
-    "cypress:open": "./node_modules/.bin/cypress open",
-    "cypress:run": "./node_modules/.bin/cypress run",
+    "clean:project": "rm -rf full_report.json mochawesome-report/** cypress/videos/** report-json/results/** allure-report/** allure-results/** || true",
+    "cy:open:spec": "./node_modules/.bin/cypress open",
     "cy:open:cucumber": "npx cypress open --config-file cypress-cucumber.json",
+    "cy:run:spec": "./node_modules/.bin/cypress run --config-file cypress.json",
     "cy:run:cucumber": "npx cypress run --config-file cypress-cucumber.json --spec cypress/integration/Books.feature",
-    
     "mocha:merge": "mochawesome-merge > full_report.json",
     "mocha:generate": "marge full_report.json",
-    "reporter:clean": "rm -rf mochawesome-report full_report.json cypress/videos/** cypress/reports/cucumber-json/** cypress/reports/report-html/**",
-    "reporter:cucumber": "node cypress/reports/reporter.js"
+    "allure:generate": "allure generate",
+    "allure:open": "allure open"
   },
   "repository": {
     "type": "git",
@@ -26,9 +26,10 @@
   },
   "homepage": "https://github.com/ScilaBrayan/fakerestapi-CypressAutomation#readme",
   "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^1.8.1",
+    "cucumber-html-reporter": "^5.2.0",
     "cypress": "^4.12.1",
     "cypress-cucumber-preprocessor": "^1.12.0",
-    "cucumber-html-reporter": "^5.2.0",
     "cypress-multi-reporters": "^1.4.0",
     "mocha": "^8.1.1",
     "mochawesome": "^6.1.1",
