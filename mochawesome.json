@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2020-08-21T19:43:05.059Z",
-    "end": "2020-08-21T19:43:05.647Z",
-    "duration": 588,
+    "start": "2020-08-21T20:06:34.362Z",
+    "end": "2020-08-21T20:06:35.042Z",
+    "duration": 680,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "89114a03-81dc-4983-9d09-90b574ab1164",
+      "uuid": "6ead10a1-741f-4d46-a0eb-546d82debe26",
       "title": "",
       "fullFile": "cypress/integration/services/books/tests/PUTBooks.spec.js",
       "file": "cypress/integration/services/books/tests/PUTBooks.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "5b9f58cf-08bd-4e05-9e57-fc857c4e7d57",
+          "uuid": "925de4b1-dffd-4726-a5de-710644bf96bb",
           "title": "PUT Books",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Atualizar um livro",
               "fullTitle": "PUT Books Atualizar um livro",
               "timedOut": null,
-              "duration": 271,
+              "duration": 337,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "GETBooks.allBooks().then(function (busca) {\n  PUTBooks.updateBooks(busca.body[0].ID).should(function (updateBook) {\n    expect(updateBook.status).to.eq(200);\n    expect(updateBook.body).to.not.be[\"null\"];\n    expect(updateBook.body.Title).to.eq('Livro');\n  });\n});",
               "err": {},
-              "uuid": "6ab1c6ae-9bf1-4383-a685-1e308ab6334d",
-              "parentUUID": "5b9f58cf-08bd-4e05-9e57-fc857c4e7d57",
+              "uuid": "e67a74b9-fa12-48cb-be59-4a5bee03f818",
+              "parentUUID": "925de4b1-dffd-4726-a5de-710644bf96bb",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Criar e alterar o livro criado",
               "fullTitle": "PUT Books Criar e alterar o livro criado",
               "timedOut": null,
-              "duration": 229,
+              "duration": 307,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -65,21 +65,21 @@
               "context": null,
               "code": "POSTBooks.addBooks().then(function (addBook) {\n  expect(addBook.status).to.eq(200);\n  expect(addBook.body).to.not.be[\"null\"];\n  PUTBooks.updateBooks(addBook.body.ID).should(function (updateBook) {\n    expect(updateBook.status).to.eq(200);\n    expect(updateBook.body.Title).to.eq('Livro');\n  });\n});",
               "err": {},
-              "uuid": "967a8e78-ba04-420b-b159-e41fbb7aee47",
-              "parentUUID": "5b9f58cf-08bd-4e05-9e57-fc857c4e7d57",
+              "uuid": "92c61d1a-499b-4b24-ab9b-56d9b4e39ce0",
+              "parentUUID": "925de4b1-dffd-4726-a5de-710644bf96bb",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "6ab1c6ae-9bf1-4383-a685-1e308ab6334d",
-            "967a8e78-ba04-420b-b159-e41fbb7aee47"
+            "e67a74b9-fa12-48cb-be59-4a5bee03f818",
+            "92c61d1a-499b-4b24-ab9b-56d9b4e39ce0"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 500,
+          "duration": 644,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
