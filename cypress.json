@@ -1,11 +1,10 @@
 {
     "baseUrl": "https://fakerestapi.azurewebsites.net/api/",
     "video": false,
-    "experimentalSourceRewriting": true,
-    "watchForFileChanges": true,
     "testFiles": "**/*.*spec.*",
-    "reporter": "cypress-multi-reporters",
-    "reporterOptions": {
-        "configFile":"reporter-config.json"
+    "env": {
+        "allure": true,
+        "allureResultsPath": "allure-results"
     }
 }
+
