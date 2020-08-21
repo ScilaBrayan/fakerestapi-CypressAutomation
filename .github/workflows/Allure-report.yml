@@ -42,8 +42,8 @@ jobs:
     - run: npm run cy:run:spec
     
     # gerar o relatorio em html
-    - run: allure generate
-    - run: allure open
+    - run: npm run allure:generate
+    - run: npm run allure:open
 
 
     - name: Allure report
