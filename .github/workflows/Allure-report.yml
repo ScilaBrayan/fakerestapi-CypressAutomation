@@ -53,4 +53,4 @@ jobs:
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: allure-report
-        FOLDER: allure-report/index.html
+        FOLDER: allure-report
