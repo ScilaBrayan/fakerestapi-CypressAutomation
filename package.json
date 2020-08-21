@@ -27,6 +27,7 @@
   "homepage": "https://github.com/ScilaBrayan/fakerestapi-CypressAutomation#readme",
   "devDependencies": {
     "@shelex/cypress-allure-plugin": "^1.8.1",
+    "allure-commandline": "^1.4.22-1",
     "cucumber-html-reporter": "^5.2.0",
     "cypress": "^4.12.1",
     "cypress-cucumber-preprocessor": "^1.12.0",
