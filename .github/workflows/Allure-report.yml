@@ -45,11 +45,11 @@ jobs:
     - run: npm run allure:generate
     - run: npm run allure:open
 
-    
-    # publicar relatorio em html
-    - name: Deploy to GithubPages
-      uses: JamesIves/github-pages-deploy-action@3.5.9
+
+    - name: Allure report
+      # You may pin to the exact commit or the version.
+      # uses: afiore/action-allure-report@e43ebd6f4f4c74b07b1eb02f042902bbe6786a19
+      uses: afiore/action-allure-report@v0.1.0
       with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: allure-report
-        FOLDER: allure-report
+        # Allure test result data dir
+        results-dir: allure-report
